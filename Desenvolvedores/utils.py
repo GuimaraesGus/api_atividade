@@ -3,24 +3,24 @@ from models import Programador, Habilidades, ProgramadorHabilidade
 # Insere dados na tabela programador
 def insere_programador():
     programador = Programador(nome='Gustavo', idade=29, email='gustavollaguimaraes@gmail.com')
-    print(programador)
+    programador.save()
+    programador = Programador(nome='Guimarães', idade=17, email='guuguimaraes@hotmail.com')
     programador.save()
 
 # Insere dados na tabela habilidades
 def insere_habilidade():
     habilidade = Habilidades(nome='Python')
     habilidade.save()
-    print(habilidade)
-    # habilidade = Habilidades(nome='Java')
-    # habilidade.save()
-    # habilidade = Habilidades(nome='COBOL')
-    # habilidade.save()
-    # habilidade = Habilidades(nome='C#')
-    # habilidade.save()
-    # habilidade = Habilidades(nome='SQL')
-    # habilidade.save()
-    # habilidade = Habilidades(nome='HTML')
-    # habilidade.save()
+    habilidade = Habilidades(nome='Java')
+    habilidade.save()
+    habilidade = Habilidades(nome='COBOL')
+    habilidade.save()
+    habilidade = Habilidades(nome='C#')
+    habilidade.save()
+    habilidade = Habilidades(nome='SQL')
+    habilidade.save()
+    habilidade = Habilidades(nome='HTML')
+    habilidade.save()
 
 # Insere dados na tabela programador_habilidade
 def insere_programador_habilidade():
@@ -28,15 +28,15 @@ def insere_programador_habilidade():
     programador_habilidade.save()
     programador_habilidade = ProgramadorHabilidade(programador_id=2, habilidade_id=6)
     programador_habilidade.save()
-    programador_habilidade = ProgramadorHabilidade(programador_id=3, habilidade_id=2)
+    programador_habilidade = ProgramadorHabilidade(programador_id=1, habilidade_id=1)
     programador_habilidade.save()
-    programador_habilidade = ProgramadorHabilidade(programador_id=3, habilidade_id=3)
+    programador_habilidade = ProgramadorHabilidade(programador_id=1, habilidade_id=3)
     programador_habilidade.save()
-    programador_habilidade = ProgramadorHabilidade(programador_id=3, habilidade_id=7)
+    programador_habilidade = ProgramadorHabilidade(programador_id=1, habilidade_id=6)
     programador_habilidade.save()
-    programador_habilidade = ProgramadorHabilidade(programador_id=3, habilidade_id=5)
+    programador_habilidade = ProgramadorHabilidade(programador_id=1, habilidade_id=5)
     programador_habilidade.save()
-    programador_habilidade = ProgramadorHabilidade(programador_id=3, habilidade_id=6)
+    programador_habilidade = ProgramadorHabilidade(programador_id=1, habilidade_id=1)
     programador_habilidade.save()
 
 # Consulta dados na tabela programador
@@ -83,7 +83,7 @@ def exclui_habilidade():
 
 # Exclui dados na tabela programador_habilidade
 def exclui_programador_habilidade():
-    programador_habilidade = ProgramadorHabilidade.query.filter_by(programador_id=3, habilidade_id=2).first()
+    programador_habilidade = ProgramadorHabilidade.query.filter_by(programador_id=1, habilidade_id=1).first()
     programador_habilidade.delete()
 
 if __name__ == '__main__':
@@ -96,7 +96,7 @@ if __name__ == '__main__':
     # Manipulação de Habilidades
     # insere_habilidade()
     consulta_habilidades()
-    # altera_habilidadev()
+    # altera_habilidade()
     # exclui_habilidade()
 
     # Manipulação de Habilidades de Programador
