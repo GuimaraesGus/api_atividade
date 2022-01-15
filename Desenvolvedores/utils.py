@@ -89,18 +89,18 @@ def exclui_programador_habilidade():
 if __name__ == '__main__':
     # Manipulação de Programador
     # insere_programador()
-    # consulta_programadores()
+    consulta_programadores()
     # altera_programador()
     # exclui_programador()
 
     # Manipulação de Habilidades
     # insere_habilidade()
-    # consulta_habilidades()
+    consulta_habilidades()
     # altera_habilidadev()
     # exclui_habilidade()
 
     # Manipulação de Habilidades de Programador
     # insere_programador_habilidade()
-    # consulta_programadores_habilidades()
+    consulta_programadores_habilidades()
     # exclui_programador_habilidade()
     # consulta_programadores_habilidades()
